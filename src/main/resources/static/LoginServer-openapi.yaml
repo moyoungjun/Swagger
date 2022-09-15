@@ -1,0 +1,56 @@
+openapi: "3.0.3"
+info:
+  title: "LoginServer API"
+  description: "LoginServer API"
+  version: "1.0.0"
+servers:
+  - url: "https://LoginServer"
+paths:
+  /notice:
+    post:
+      summary: "POST notice"
+      operationId: "noticeRegister"
+      responses:
+        "200":
+          description: "OK"
+  /loginserver:
+    get:
+      summary: "GET loginserver"
+      operationId: "a"
+      responses:
+        "200":
+          description: "OK"
+    post:
+      summary: "POST loginserver"
+      operationId: "userregister"
+      responses:
+        "200":
+          description: "OK"
+  /loginserver/{id}:
+    get:
+      summary: "GET loginserver/{id}"
+      operationId: "userid"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int32"
+      responses:
+        "200":
+          description: "OK"
+  /auth/token:
+    post:
+      summary: "POST auth/token"
+      operationId: "Authorizepost"
+      responses:
+        "200":
+          description: "OK"
+  /user/me:
+    get:
+      summary: "GET user/me"
+      operationId: "MyInfomation"
+      responses:
+        "200":
+          description: "OK"
